@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Collections;
 import java.util.List;
 
 @Data
@@ -14,6 +15,6 @@ public class UserDTO {
     private Long id;
     private String name;
     private String email;
-    private List<OrderDTO> orders;
+    private List<OrderDTO> orders = Collections.emptyList();
 
 }
