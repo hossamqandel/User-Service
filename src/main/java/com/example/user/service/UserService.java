@@ -24,7 +24,7 @@ public class UserService implements CommandLineRunner {
     private final UserRepository userRepository;
 
     @Override
-    public void run(String... args) {
+    public void run(String... args) { // Should be moved to a separate class
         createUsers();
     }
 
@@ -40,7 +40,8 @@ public class UserService implements CommandLineRunner {
         return mapper.map(userRepository.findByEmail(email), UserDTO.class);
     }
 
-    public UserDTO getUserOrders(Long id) {
+    public UserDTO getUserOrders(Long id) { // userId
+    // Should be splitted into two functions
         User user = userRepository.findById(id).get();
         UserDTO userDTO = mapper.map(user, UserDTO.class);
         List<OrderDTO> orders = orderProvider.getAllUserOrders(id);

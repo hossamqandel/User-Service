@@ -32,8 +32,8 @@ public class UserController {
         if (userDTO == null) ResponseEntity.notFound().build();
         return new ResponseEntity<>(userDTO, HttpStatus.OK);
     }
-
-    @GetMapping("/orders/users/{id}")
+// Paid, Pending, Cancelled
+    @GetMapping("/orders/users/{id}") // /users/{userId}/orders
     public ResponseEntity<UserDTO> getUserOrders(@PathVariable Long id){
         UserDTO userDTO = userService.getUserOrders(id);
         if (userDTO == null) ResponseEntity.notFound().build();

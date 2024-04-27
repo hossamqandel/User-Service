@@ -5,7 +5,8 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+@Configuration // @Component
+//ComponentConfig
 public class AppConfig {
     @Bean
     public ModelMapper buildModelMapper() {
