@@ -35,6 +35,7 @@ public class UserService implements CommandLineRunner {
                 .collect(Collectors.toList());
     }
 
+
     public UserDTO getUserByEmail(String email) {
         return mapper.map(userRepository.findByEmail(email), UserDTO.class);
     }
