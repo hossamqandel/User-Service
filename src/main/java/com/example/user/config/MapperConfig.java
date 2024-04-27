@@ -3,14 +3,13 @@ package com.example.user.config;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
-@Configuration // @Component
-//ComponentConfig
-public class AppConfig {
+@Component // @Component
+public class MapperConfig {
     @Bean
     public ModelMapper buildModelMapper() {
-        ModelMapper mapper = new ModelMapper();
+        var mapper = new ModelMapper();
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         return mapper;
     }
