@@ -1,4 +1,4 @@
-package com.example.user.util;
+package com.example.user.component.initializer;
 
 import com.example.user.entity.User;
 import com.example.user.repo.UserRepository;
